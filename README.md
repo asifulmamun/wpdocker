@@ -42,10 +42,10 @@ http://localhost
 
 DATABASE ACCESS
 ```
-      WORDPRESS_DB_HOST: localhost:3306
-      WORDPRESS_DB_USER: asifulmamun
-      WORDPRESS_DB_PASSWORD: 1998
-      WORDPRESS_DB_NAME: wp
+WORDPRESS_DB_HOST: localhost:3306
+WORDPRESS_DB_USER: asifulmamun
+WORDPRESS_DB_PASSWORD: 1998
+WORDPRESS_DB_NAME: wp
 ```
 
 phpMyAdmin
