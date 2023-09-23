@@ -1,0 +1,48 @@
+version: '3.1'
+
+services:
+
+  wordpress:
+    # image: wordpress
+
+    build:
+        context: .
+        dockerfile: Dockerfile  # Use the custom Dockerfile
+
+    restart: always
+    ports:
+      - 80:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: asifulmamun
+      WORDPRESS_DB_PASSWORD: 1998
+      WORDPRESS_DB_NAME: wp
+    volumes:
+      - ./:/var/www/html
+
+  db:
+    image: mysql:5.7
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: wp
+      MYSQL_USER: asifulmamun
+      MYSQL_PASSWORD: 1998
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - ./docker/db:/var/lib/mysql
+
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: 1998
+    ports:
+      - 8081:80
+
+volumes:
+  wp:
+  db:
