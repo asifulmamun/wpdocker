@@ -1,18 +1,18 @@
 
 ### Detauks abd featurs
 
-This dockerfile made & customize from official docker: https://hub.docker.com/_/wordpress
+This docker file made & customized from official docker: https://hub.docker.com/_/wordpress
 Customized by https://asifulmamun.info.bd
-This file will give you enviromnet development purpose of WordPress or Production purpose also.
+This file will also give you the environment development purpose of WordPress or Production.
 
-This dockerfile will install readymade WordPress in root directory and give best environment. Also preinstall
+This docker file will install readymade WordPress in the root directory and give the best environment. Also, preinstall
 ```
-Git, Nodjs (NPM/NPX), composer, SSH etc
+Git, Nodjs (NPM/NPX), composer, SSH, etc
 ```
 
 ### Install
 
-Remove the .git file from root directory after clone this repository
+Remove the .git file from the root directory after cloning this repository
 
 For HTTP
 ```
@@ -31,7 +31,11 @@ cd wpdocker
 rm -rf .git
 ```
 
-Ready for Docker - Requeist docker-compose, docker preinstalled in you machine
+Ready for Docker - Request docker-compose, docker preinstalled in your machine
+```
+docker-compose up -d --build
+```
+Or
 ```
 docker-compose up -d
 ```
@@ -43,7 +47,7 @@ docker ps
 docker exec -it <container_name/id> bash
 ```
 
-### Link and Detsils
+### Link and Details
 
 
 Site
