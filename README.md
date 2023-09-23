@@ -13,9 +13,21 @@ Git, Nodjs (NPM/NPX), composer, SSH etc
 ### Install
 
 Remove the .git file from root directory after clone this repository
+
+For HTTP
 ```
 git clone https://github.com/asifulmamun/wpdocker.git
+```
+For SSH
+```
+git clone git@github.com:asifulmamun/wpdocker.git
+```
+
+```
 cd wpdocker
+```
+
+```
 rm -rf .git
 ```
 
